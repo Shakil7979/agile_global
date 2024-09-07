@@ -1,4 +1,4 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 html{
 	font-size: 62.5%;
@@ -6,6 +6,7 @@ html{
 body{	
 	font-size: 1.6rem; 
 	font-weight: 400;
+	font-family: "DM Sans", sans-serif;
 }
 h1,h2,h3,h4,h5,h6,p{
 	margin: 0;
@@ -21,12 +22,200 @@ ul li a,a{
 }
 /*======================  Start Page  ======================*/
 
+.banner_area{
+	background: url(../images/banner/bg.png) no-repeat scroll center center / cover;
+}
+
+.header_area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9;
+}
+
+.banner_area {
+	background: url(../images/banner/bg.png) no-repeat scroll center center / cover;
+}
+
+.banner {
+	display: flex;
+	align-items: center; 
+	height: 750px;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	padding: 35px 0;
+	justify-content: space-between;
+}
+
+.menu a {
+	color: #f9f9f9;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.menu ul {
+	display: flex;
+	align-items: center;
+	gap: 35px;
+}
+
+.banner_text h4 {
+	color: #fff;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+
+.banner_text h2 {
+	color: #f9f9f9;
+	font-size: 68px;
+	font-weight: 100; 
+	font-family: "Inter", sans-serif; 
+}
+
+.banner_text p {
+	color: #f9f9f9;
+	font-size: 18px;
+	margin-bottom: 34px;
+}
+
+.banner_text {
+	width: 100%;
+	max-width: 638px;
+}
+
+.btn_1 {
+	background: #f00d0d;
+	color: #ffff;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 8px 12px;
+	display: inline-block;
+	transition: 0.3s;
+}
+
+.btn_1:hover {
+	color: #ffff;
+	opacity: 0.83;
+}
+
+.banner_text h2 {
+	color: #f9f9f9cc;
+	font-size: 68px;
+	font-weight: 300;
+	margin: 14px 0;
+}
+
+.section_padding{
+	padding: 100px 0;
+}
+
+.overview_title h4 {
+	color: #4c4e4f;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	font-family: "Inter", sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
 
 
+.overview_title h3 {
+	font-size: 48px;
+	color: #084873;
+	font-weight: 300;
+	font-family: "Inter", sans-serif; 
+	margin-bottom: 38px;
+	position: relative;
+}
+
+.overview_title h3:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 50px;
+	height: 2px;
+	background: #084873;
+}
+
+.overview_title h3::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 90px;
+	height: 3px;
+	background: #f00d0d;
+}
+
+.overview_title p {
+	font-size: 25px;
+	color: #000;
+	margin-bottom: 50px;
+}
 
 
+.overview_item p {
+	color: #090800;
+	font-size: 16px;
+	width: 139px;
+}
 
+.overview_item h4 {
+	color: #17476a;
+	font-family: "Inter", sans-serif; 
+	font-size: 72px;
+	font-weight: 300;
+}
+
+.overview_row {
+	display: flex; 
+	text-align: center;
+}
+
+.overview_item {
+	text-align: left;
+	flex: 0 0 20%;
+}
+
+.after_h3 h3 {
+	color: #4c4e4f;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	font-family: "Inter", sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	position: relative;
+}
+
+.after_h3 h3::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 100px;
+	height: 3px;
+	background: #f00d0d;
+}
+
+.after_h3 {
+	margin-top: 70px;
+}
 
 /*======================  End Page  ======================*/
 
+/* 
+
+font-family: "DM Sans", sans-serif;
+font-family: "Inter", sans-serif; 
+
+*/
 
