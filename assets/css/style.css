@@ -153,27 +153,17 @@ ul li a,a{
 	color: #084873;
 	font-weight: 700;
 	font-family: "Inter", sans-serif; 
-	margin-bottom: 38px;
+	margin-bottom: 55px;
 	position: relative;
 }
-
-.overview_title h3:after {
-	content: "";
-	position: absolute;
-	left: 0;
-	bottom: -10px;
-	width: 50px;
-	height: 2px;
-	background: #084873;
-}
-
+ 
 .overview_title h3::after {
 	content: "";
 	position: absolute;
 	left: 0;
-	bottom: -10px;
+	bottom: -23px;
 	width: 90px;
-	height: 3px;
+	height: 5px;
 	background: #f00d0d;
 }
 
@@ -222,9 +212,9 @@ ul li a,a{
 	content: "";
 	position: absolute;
 	left: 0;
-	bottom: -10px;
+	bottom: -13px;
 	width: 100px;
-	height: 3px;
+	height: 5px;
 	background: #f00d0d;
 }
 
