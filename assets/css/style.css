@@ -21,9 +21,9 @@ ul li a,a{
 	text-decoration: none;
 }
 /*======================  Start Page  ======================*/
-
-.banner_area{
+.banner_area {
 	background: url(../images/banner/bg.png) no-repeat scroll center center / cover;
+	padding: 339px 0 150px 0;
 }
 
 .header_area {
@@ -32,6 +32,27 @@ ul li a,a{
 	left: 0;
 	width: 100%;
 	z-index: 9;
+	transition: background-color 0.5s ease;
+}
+
+.header_white {
+	background: #fff;
+}
+
+.header_white .main_logo {
+	display: none;
+}
+
+.white_logo{
+	display: none;
+}
+
+.header_white .white_logo{
+	display: block;
+}
+
+.header_white .menu a {
+	color: #000 !important;
 }
 
 .banner_area {
@@ -41,7 +62,7 @@ ul li a,a{
 .banner {
 	display: flex;
 	align-items: center; 
-	height: 750px;
+	/* height: 750px; */
 }
 
 .header {
@@ -53,7 +74,7 @@ ul li a,a{
 
 .menu a {
 	color: #f9f9f9;
-	font-size: 16px;
+	font-size: 15px;
 	display: flex;
 	align-items: center;
 	gap: 10px;
@@ -62,7 +83,7 @@ ul li a,a{
 .menu ul {
 	display: flex;
 	align-items: center;
-	gap: 35px;
+	gap: 20px;
 }
 
 .banner_text h4 {
@@ -87,6 +108,7 @@ ul li a,a{
 .banner_text {
 	width: 100%;
 	max-width: 638px;
+	margin-top: -107px;
 }
 
 .btn_1 {
