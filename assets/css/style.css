@@ -129,7 +129,7 @@ ul li a,a{
 .overview_title h3 {
 	font-size: 48px;
 	color: #084873;
-	font-weight: 300;
+	font-weight: 700;
 	font-family: "Inter", sans-serif; 
 	margin-bottom: 38px;
 	position: relative;
@@ -188,7 +188,7 @@ ul li a,a{
 .after_h3 h3 {
 	color: #4c4e4f;
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 600;
 	letter-spacing: 1px;
 	font-family: "Inter", sans-serif;
 	text-transform: uppercase;
@@ -209,6 +209,151 @@ ul li a,a{
 .after_h3 {
 	margin-top: 70px;
 }
+
+.deep_area,
+.work_area{
+	background: #f4f3f3;
+}
+
+.work_single_text h4 {
+	color: #000;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.work_single_text p {
+	color: #000;
+	font-size: 14px; 
+}
+
+.single_work_item img {
+	width: 100%;
+}
+
+.single_work_item{ 
+	background: #fff;
+	height: 100%;
+}
+
+.work_single_text {
+	padding: 20px 30px;
+}
+
+.single_business_item{
+	position: relative;
+}
+
+.single_business_item img {
+	width: 100%;
+}
+
+.single_business_item h3 {
+	font-size: 28px;
+	font-family: "Inter", sans-serif;
+	text-align: center;
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	color: #fff;
+	z-index: 999;
+}
+
+
+.single_business_item::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #ff0000;
+	opacity: 0.5;
+}
+
+.single_business_item_2::after { 
+	background: #e26624; 
+	opacity: 0.7;
+}
+
+.single_business_item_3::after { 
+	background: #3d3a37; 
+}
+
+
+.deep_left p {
+	color: #124560;
+	font-size: 18px;
+	margin-bottom: 55px;
+	padding-top: 65px;
+	width: 100%;
+	max-width: 285px;
+}
+
+.btn_2 {
+	color: #4c4e4f;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-family: "Inter", sans-serif;
+	text-transform: uppercase;
+	position: relative;
+	display: inline-block;
+	transition: 0.3s;
+}
+
+.btn_2:hover {
+	color: #124560;
+}
+
+.btn_2:after  {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 100%;
+	height: 4px;
+	background: #f00d0d;
+}
+
+.deep_box{
+	margin-top: 76px;
+}
+
+.single_deep_item {
+	position: relative;
+	margin-bottom: 30px;
+	width: 88%;
+}
+
+.single_deep_item::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.3;
+}
+
+.single_deep_item img {
+	width: 100%;
+}
+
+.single_deep_item h4 {
+	font-size: 14px;
+	text-transform: uppercase;
+	font-family: "Inter", sans-serif;
+	color: #fff;
+	position: absolute;
+	bottom: 8px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 9;
+}
+
 
 /*======================  End Page  ======================*/
 
