@@ -23,7 +23,7 @@ ul li a,a{
 /*======================  Start Page  ======================*/
 .banner_area {
 	background: url(../images/banner/bg.png) no-repeat scroll center center / cover;
-	padding: 339px 0 150px 0;
+	padding: 412px 0 219px 0;
 }
 
 .header_area {
@@ -83,7 +83,7 @@ ul li a,a{
 .menu ul {
 	display: flex;
 	align-items: center;
-	gap: 20px;
+	gap: 28px;
 }
 
 .banner_text h4 {
@@ -108,7 +108,7 @@ ul li a,a{
 .banner_text {
 	width: 100%;
 	max-width: 638px;
-	margin-top: -107px;
+	margin-top: -145px;
 }
 
 .btn_1 {
