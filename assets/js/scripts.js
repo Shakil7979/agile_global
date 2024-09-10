@@ -127,3 +127,40 @@ $(document).ready(function() {
 });
 
 
+$(document).ready(function() {
+    function animateCounter(element, endValue, duration) {
+        $({ countNum: 0 }).animate({ countNum: endValue }, {
+            duration: duration,
+            easing: 'swing',
+            step: function() {
+                $(element).text(Math.ceil(this.countNum));
+            },
+            complete: function() {
+                $(element).text(this.countNum);
+            }
+        });
+    }
+
+    function handleCounterAnimation(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const $element = $(entry.target).find('h4');
+                if ($element.data('animated')) return; // Check if already animated
+                const endValue = parseInt($element.text().replace(/,/g, ''), 10); // Get end value
+                $element.text('0'); // Start from 0
+                animateCounter($element[0], endValue, 2000); // Animate to the end value in 2000ms
+                $element.data('animated', true); // Mark as animated
+                observer.unobserve(entry.target); // Stop observing once animation is triggered
+            }
+        });
+    }
+
+    const observer = new IntersectionObserver(handleCounterAnimation, {
+        threshold: 0.5 // Adjust threshold as needed
+    });
+
+    // Observe each `.overview_item` individually
+    $('.overview_item').each(function() {
+        observer.observe(this);
+    });
+});
