@@ -883,6 +883,10 @@ ul li a,a{
 	transform: scale(1.1);
 }
 
+.slider_box_2 .slider_items { 
+	max-width: 720px;
+}
+
 
 
 /*======================  End Page  ======================*/
