@@ -866,6 +866,23 @@ ul li a,a{
 	display: none;
 }
 
+.mobile_banner_img {
+	display: none;
+}
+
+.single_business_item   {
+	overflow: hidden;
+	transition: 0.3s;
+}
+
+.single_business_item  img { 
+	transition: 0.3s;
+}
+
+.single_business_item:hover img {
+	transform: scale(1.1);
+}
+
 
 
 /*======================  End Page  ======================*/
