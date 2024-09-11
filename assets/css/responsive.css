@@ -405,6 +405,15 @@
         width: 273px;
         height: 39px;
     }
+    .work_single_text {
+        padding: 20px 15px;
+    }
+    .subscribe_text_left a { 
+        padding: 12px 35px ; 
+    } 
+    .subscribe_form button { 
+        padding: 14px 35px ; 
+    }
 
 }
 
