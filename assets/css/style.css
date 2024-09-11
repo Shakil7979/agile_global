@@ -862,6 +862,10 @@ ul li a,a{
 }
 /*End Mobile Menu icon*/
 
+.mobiler_for_menu {
+	display: none;
+}
+
 
 
 /*======================  End Page  ======================*/

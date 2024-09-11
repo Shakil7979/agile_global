@@ -99,6 +99,7 @@
         background: #fff;
         border-top: 1px solid #ddd;
         padding: 15px 0;
+        display: none;
     }
 }
 
