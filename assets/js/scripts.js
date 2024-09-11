@@ -1,13 +1,34 @@
 $(document).ready(function(){  
 
 	// Carousel
-	$('.slider_carousel').owlCarousel({
-		items:1,
-		loop:true,
-		nav: false,
-		dots:false,
-		autoplay:true,
-	});
+    $('.slider_carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 5000, // Set delay for each slide
+        animateIn: 'fadeIn',   // Optional, for fade effect
+        animateOut: 'fadeOut', // Optional, for fade effect
+        onTranslate: function(event) {
+            // Reset animation by moving .slider_items out of view
+            $('.slider_items').css({
+                'opacity': '0',
+                'transform': 'translateX(-100px)',
+                'transition': 'none'
+            });
+        },
+        onTranslated: function(event) {
+            // Animate .slider_items back into view
+            $('.slider_items').css({
+                'opacity': '1',
+                'transform': 'translateX(0)',
+                'transition': 'all 1.5s ease' // Adjust the speed as needed
+            });
+        }
+    });
+    
+    
 
 	// Made Carousel
 	$('.made_carousel').owlCarousel({

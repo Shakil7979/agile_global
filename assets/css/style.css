@@ -193,17 +193,20 @@ ul li a,a{
 .btn_1 {
 	background: #f00d0d;
 	color: #ffff;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 500;
 	padding: 8px 16px;
 	display: inline-block;
 	transition: 0.3s;
+	text-transform: uppercase;
 }
 
 .btn_1:hover {
 	color: #ffff;
 	opacity: 0.83;
 }
+
+
 
 
 .section_padding{
@@ -241,9 +244,14 @@ ul li a,a{
 }
 
 .overview_title p {
-	font-size: 25px;
+	font-size: 20px;
 	color: #000;
 	margin-bottom: 50px;
+}
+
+.subscribe_text_left {
+	width: 50%;
+	margin: 0 auto;
 }
 
 
@@ -271,26 +279,37 @@ ul li a,a{
 	flex: 0 0 20%;
 }
 
-.after_h3 h3 {
-	color: #4c4e4f;
-	font-size: 16px;
-	font-weight: 600;
-	letter-spacing: 2px;
-	font-family: "Inter", sans-serif;
-	text-transform: uppercase;
-	margin-bottom: 5px;
-	position: relative;
+.after_h3 a {
+    color: #4c4e4f;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    position: relative;
+    transition: color 0.3s; /* Smooth color transition */
 }
 
-.after_h3 h3::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	bottom: -13px;
-	width: 120px;
-	height: 5px;
-	background: #f00d0d;
+.after_h3 a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -13px;
+    width: 120px; /* Initial width */
+    height: 5px;
+    background: #f00d0d;
+    transition: width 0.3s ease; /* Smooth transition for width */
 }
+
+.after_h3 a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+.after_h3 a:hover {
+    color: #000; /* Optional: Change text color on hover */
+}
+
 
 .after_h3 {
 	margin-top: 70px;
@@ -303,8 +322,9 @@ ul li a,a{
 
 .work_single_text h4 {
 	color: #000;
-	font-size: 16px;
+	font-size: 20px;
 	margin-bottom: 10px;
+	font-weight: 900;
 }
 
 .work_single_text p {
@@ -369,11 +389,11 @@ ul li a,a{
 
 .deep_left p {
 	color: #124560;
-	font-size: 18px;
+	font-size: 20px;
 	margin-bottom: 55px;
-	padding-top: 65px;
+	padding-top: 30px;
 	width: 100%;
-	max-width: 285px;
+	max-width: 324px;
 }
 
 .btn_2 {
@@ -702,8 +722,7 @@ ul li a,a{
 }
 
 .made_carosel_content {
-	width: 100%;
-	max-width: 1000px;
+	width: 100%; 
 	margin-top: 98px;
 }
 
