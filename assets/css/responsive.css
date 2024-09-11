@@ -34,6 +34,7 @@
     .slider_box {
         height: auto;
         padding-top: 80px;
+        height: 863px;
     }
     .slider_items h2 { 
         font-size: 40px; 
@@ -372,6 +373,9 @@
     .team_area { 
         background: #F4F3F3;
     }
+    .career_img{ 
+        display: block;
+    }
     .made_carosel_content { 
         margin-top: 64px;
     }
@@ -414,7 +418,12 @@
     .subscribe_form button { 
         padding: 14px 35px ; 
     }
-
+    .slider_box { 
+        height: 730px;
+    }
+    .section_padding {
+        padding: 45px 0;
+    }
 }
 
 @media all and (max-width: 575px){
@@ -443,6 +452,9 @@
     }
     .footer_logo img {
         width: 115px;
+    }
+    .slider_box { 
+        height: 743px;
     }
 }
 

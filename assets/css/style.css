@@ -902,6 +902,15 @@ ul li a,a{
 	display: none;
 }
 
+.career_img{ 
+	display: none;
+}
+
+.career_img img {
+	width: 100%;
+	margin-bottom: 25px;
+}
+
 /*======================  End Page  ======================*/
 
 /* 
