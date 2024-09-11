@@ -1,13 +1,4 @@
-$(document).ready(function(){ 
-
-	// $('.header_area').hover(
-    //     function() { 
-    //         $(this).addClass('header_white');
-    //     },
-    //     function() { 
-    //         $(this).removeClass('header_white');
-    //     }
-    // );
+$(document).ready(function(){  
 
 	// Carousel
 	$('.slider_carousel').owlCarousel({
@@ -32,65 +23,8 @@ $(document).ready(function(){
         $('html, body').animate({ scrollTop: 0 }, 'slow');
 
 		return false;
-    });
-
-	// $('.menu ul li a').click(function() { 
-    //     $('.header_area').addClass('header_white');
-         
-    //     $('.drop_menu_main').show();
-
-	// 	return false;
-    // });
-  
-    let isClicked = false; // Flag to check if the menu is clicked
-
-    // Menu link click event
-    $('.menu ul li a.who_we_are').click(function(event) {
-        const $icon = $(this).find('i'); // Get the icon inside the clicked link
-
-        if (isClicked) {
-            // If clicked already, hide dropdown, remove class, and reset icon rotation
-            $('.header_area').removeClass('header_white');
-            $('.drop_menu_main').slideUp(); // Hide dropdown with animation
-            $icon.css('transform', 'rotate(0deg)'); // Reset icon rotation
-            isClicked = false; // Reset the click flag
-        } else {
-            // If not clicked, show dropdown, add class, and rotate icon
-            $('.header_area').addClass('header_white');
-            $('.drop_menu_main').stop(true, true).slideDown(); // Show dropdown with animation
-            $icon.css('transform', 'rotate(180deg)'); // Rotate the icon
-            isClicked = true; // Set the flag to true after clicking
-        }
-
-        event.stopPropagation(); // Prevent click event from bubbling up
-        return false; // Prevent default action
-    });
-
-    // Hover event for header_area
-    $('.header_area').hover(
-        function() {
-            if (!isClicked) {
-                $(this).addClass('header_white');
-            }
-        },
-        function() {
-            if (!isClicked) {
-                $(this).removeClass('header_white');
-            }
-        }
-    );
-
-    // Click outside of '.header_area' or '.menu' to hide dropdown and remove 'header_white'
-    $(document).click(function(event) {
-        if (!$(event.target).closest('.header_area, .menu').length) {
-            $('.header_area').removeClass('header_white');
-            $('.drop_menu_main').slideUp(); // Hide dropdown with animation
-            
-            // Reset all icons rotation
-            $('.menu ul li a i').css('transform', 'rotate(0deg)');
-            isClicked = false; // Reset the click flag
-        }
-    });
+    }); 
+ 
 });
 
 
@@ -162,5 +96,62 @@ $(document).ready(function() {
     // Observe each `.overview_item` individually
     $('.overview_item').each(function() {
         observer.observe(this);
+    });
+});
+
+
+
+
+$(document).ready(function() {
+    let currentMenu = null; // Track the currently open menu
+
+    // Menu link click event
+    $('.menu ul li a').click(function(event) {
+        const $icon = $(this).find('i'); // Get the icon inside the clicked link
+        const menuText = $(this).text().trim().toLowerCase().replace(/\s+/g, '-'); // Get the menu text and format it
+        const $dropdown = $(`.drop_menu_main[data-menu="${menuText}"]`); // Find the corresponding dropdown based on menu text
+
+        if (currentMenu === menuText) {
+            // If the same menu is clicked, hide the dropdown and reset everything
+            $('.header_area').removeClass('header_white');
+            $dropdown.slideUp(); // Hide the clicked dropdown
+            $icon.css('transform', 'rotate(0deg)'); // Reset icon rotation
+            currentMenu = null; // Reset current menu
+        } else {
+            // If a different menu is clicked, show corresponding dropdown, add class, and rotate icon
+            $('.header_area').addClass('header_white');
+            $('.drop_menu_main').stop(true, true).slideUp(); // Hide any open dropdown
+            $('.menu ul li a i').css('transform', 'rotate(0deg)'); // Reset all icons
+            $dropdown.stop(true, true).slideDown(); // Show the clicked dropdown
+            $icon.css('transform', 'rotate(180deg)'); // Rotate the icon
+            currentMenu = menuText; // Set the current menu to this one
+        }
+
+        event.stopPropagation(); // Prevent click event from bubbling up
+        return false; // Prevent default action
+    });
+
+    // Hover event for header_area
+    $('.header_area').hover(
+        function() {
+            if (!currentMenu) {
+                $(this).addClass('header_white');
+            }
+        },
+        function() {
+            if (!currentMenu) {
+                $(this).removeClass('header_white');
+            }
+        }
+    );
+
+    // Click outside of '.header_area' or '.menu' to hide dropdown and remove 'header_white'
+    $(document).click(function(event) {
+        if (!$(event.target).closest('.header_area, .menu').length) {
+            $('.header_area').removeClass('header_white');
+            $('.drop_menu_main').slideUp(); // Hide all dropdowns with animation
+            $('.menu ul li a i').css('transform', 'rotate(0deg)'); // Reset all icons
+            currentMenu = null; // Reset the current menu
+        }
     });
 });

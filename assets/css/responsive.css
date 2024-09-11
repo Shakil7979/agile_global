@@ -1,5 +1,10 @@
 @media all and (max-width: 1199px){
-
+    .logo img {
+        width: 175px;
+    }
+    .menu ul { 
+        gap: 16px;
+    }
 }
 
 @media all and (max-width: 991px){
