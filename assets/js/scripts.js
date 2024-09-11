@@ -6,8 +6,7 @@ $(document).ready(function(){
         loop: true,
         nav: false,
         dots: false,
-        autoplay: true,
-        autoplayTimeout: 5000, // Set delay for each slide
+        // autoplay: true, 
         animateIn: 'fadeIn',   // Optional, for fade effect
         animateOut: 'fadeOut', // Optional, for fade effect
         onTranslate: function(event) {
@@ -175,4 +174,33 @@ $(document).ready(function() {
             currentMenu = null; // Reset the current menu
         }
     });
+});
+
+
+$(document).ready(function() {
+    function checkWidth() {
+        if ($(window).width() < 991) {
+            $('.header_area').addClass('header_white');
+        } else {
+            $('.header_area').removeClass('header_white');
+        }
+    }
+
+    // Check width on page load
+    checkWidth();
+
+    // Check width on window resize
+    $(window).resize(function() {
+        checkWidth();
+    });
+});
+
+
+
+
+// Mobile Menu Icon
+$(document).ready(function(){
+	$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+		$(this).toggleClass('open');
+	});
 });
