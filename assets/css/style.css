@@ -894,6 +894,13 @@ ul li a,a{
 	display: block;
 }
 
+.follow_social{
+	display: none;
+}
+
+.footer_mobile_main {
+	display: none;
+}
 
 /*======================  End Page  ======================*/
 

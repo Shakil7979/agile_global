@@ -276,6 +276,68 @@
     .subscribe_right h3, .subscribe_text_left h3 { 
         font-size: 20px; 
     }
+    .footer {
+        display: none;
+    }
+    .single_mobile_footer {
+        background: #000816;
+        border-bottom: 1px solid #535353;
+        padding: 10px 0;
+    }
+    .single_mobile_ul > li > a {
+        font-size: 18px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .single_mobile_ul ul a, .single_mobile_ul ul p {
+        color: #fff;
+        font-size: 14px;
+        margin-top: 5px;
+        display: inline-block;
+    }
+    .single_mobile_ul ul {
+        /* padding: 15px 0; */
+    }
+
+    .single_mobile_ul ul {
+        overflow: hidden; /* Prevent content overflow */
+        transition: max-height 0.3s ease; /* Smooth transition for height */
+        max-height: 0; /* Hide nested lists by default */
+    }
+
+    .single_mobile_ul ul.open {
+        max-height: 500px; /* Set to a value larger than the height of your nested list */
+    }
+
+    
+    .single_mobile_ul ul.show {
+        display: block; /* Show nested lists when active */
+    }
+    
+    .single_mobile_ul .fa-plus {
+        transition: transform 0.3s ease; /* Smooth transition for icon rotation */
+    } 
+    .footer_main {
+        padding: 25px 0 0 0;
+    }
+     .mobile_none{
+        display: none;
+     }
+     .footer_bottom_left ul { 
+        gap: 8px;
+        flex-direction: column;
+    }
+    .footer_bottom_left a, .footer_bottom_left p {
+        font-size: 20px;
+    }
+    .footer_top_to_back {
+        display: none;
+    }
+    .footer_mobile_main {
+        display: block;
+    }
     
 }
 
@@ -313,6 +375,37 @@
     .made_carosel_content { 
         margin-top: 64px;
     }
+    .footer_top_row { 
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .follow_social{
+        display: block;
+    }
+    .footer_social {
+        width: 100%;
+    }
+    .footer_logo { 
+        width: 100%;
+    }
+    .footer_logo h4 {
+        font-size: 16px;
+    }
+    .footer_logo img {
+        width: 150px;
+    }
+    .footer_social a i { 
+        font-size: 17px;
+    }
+    .subscribe_form input {
+        border: none;
+        padding: 10px 14px;
+        font-size: 14px;
+        width: 273px;
+        height: 39px;
+    }
+
 }
 
 @media all and (max-width: 575px){
@@ -335,6 +428,12 @@
     }
     .btn_1 { 
         font-size: 14px; 
+    }
+    .footer_logo h4 {
+        font-size: 14px;
+    }
+    .footer_logo img {
+        width: 115px;
     }
 }
 

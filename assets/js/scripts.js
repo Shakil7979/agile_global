@@ -252,3 +252,38 @@ $(document).ready(function() {
     });
 });
 
+
+
+// acordion for footer 
+$(document).ready(function() {
+    // Handle accordion effect for mobile menu items
+    $('.click_footer_mobiless').click(function(e) {
+        e.preventDefault(); // Prevent default link behavior
+
+        const $icon = $(this).find('i'); // Get the icon inside the clicked link
+        const $nestedUl = $(this).siblings('ul'); // Get the nested ul element
+        
+        // Calculate the full height of the nested ul
+        const contentHeight = $nestedUl[0].scrollHeight;
+
+        if ($nestedUl.hasClass('open')) {
+            $nestedUl.removeClass('open').css('height', contentHeight).slideUp(300, function() {
+                $(this).css('height', ''); // Clear height after animation
+            });
+            $icon.removeClass('fa-minus').addClass('fa-plus'); // Change icon to plus
+        } else {
+            // Ensure other open accordions are closed
+            $('.single_mobile_ul ul.open').removeClass('open').css('height', contentHeight).slideUp(300, function() {
+                $(this).css('height', ''); // Clear height after animation
+            });
+            $('.single_mobile_ul .fa-minus').removeClass('fa-minus').addClass('fa-plus');
+            
+            $nestedUl.addClass('open').css('height', 0).slideDown(300, function() {
+                $(this).css('height', ''); // Clear height after animation
+            });
+            $icon.removeClass('fa-plus').addClass('fa-minus'); // Change icon to minus
+        }
+    });
+});
+
+
