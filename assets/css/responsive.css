@@ -5,6 +5,18 @@
     .menu ul { 
         gap: 16px;
     }
+    .owl-next i { 
+        right: 43%;
+    }
+    .owl-prev i { 
+        left: 43%;
+    }
+    .subscribe { 
+        max-width: 100%; 
+    }
+    .subscribe_form input { 
+        width: 251px; 
+    }
 }
 
 @media all and (max-width: 991px){
@@ -16,12 +28,12 @@
     .slider_box { 
         flex-direction: column;
     }
-    .slider_items {  
-        padding: 45px 0;
+    .slider_items {
+        padding: 45px;
     }
     .slider_box {
         height: auto;
-        padding-top: 135px;
+        padding-top: 80px;
     }
     .slider_items h2 { 
         font-size: 40px; 
@@ -101,16 +113,233 @@
         padding: 15px 0;
         display: none;
     }
+
+    .drop_menu_main {
+        position: absolute;
+        right: -300px; /* Start position off-screen */
+        top: 79px;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #f4f3f3;
+        transition: right 0.3s ease; /* Smooth slide transition */
+    }
+    
+    .drop_menu_main.active {
+        right: 0; /* Slide in to visible area */
+        display: block;
+        height: 100vh;
+    }
+    
+    .dorp_menu_left { 
+        position: relative;
+    }
+
+    .drop_back i {
+        font-size: 20px;
+        color: #444;
+        position: absolute;
+        left: -27px;
+        top: 25px;
+    }
+
+    .dorp_menu_left { 
+        padding: 23px 0;
+        border: none;
+    }
+
+    .dorp_menu_left p { 
+        width: 100%;
+    }
+
+    .drop_middle_menu {
+        padding: 9px 0;
+    }
+    
+    .menu_back_drop {
+        display: block;
+    }
+
+    .drop_down_menu {
+        padding: 0 28px;
+    }
+
+    .mobile_banner_img {
+        display: block;
+    } 
+    .mobile_banner_img { 
+        width: 100%;
+    }
+    
+    .custom_slide_3_mobile .mobile_banner_img img {
+        width: 312px !important;
+        height: 312px;
+        margin: 0 auto;
+    }
+    .section_padding {
+        padding: 70px 0;
+    }
+    .overview_title h4 { 
+        font-size: 14px; 
+    }
+    .overview_title h3 {
+        font-size: 32px; 
+    }
+    .overview_title h3::after { 
+        bottom: -18px;
+        width: 73px;
+        height: 3px; 
+    }
+    .overview_title p {
+        font-size: 16px;  
+    }
+    .overview_item h4 { 
+        font-size: 40px; 
+    }
+    .overview_item p { 
+        font-size: 14px; 
+    }
+    .overview_item { 
+        flex: 0 0 32%;
+    }
+    .overview_row { 
+        flex-wrap: wrap;
+        gap: 30px 0;
+    }
+    .after_h3 a::after { 
+        width: 86px;
+        height: 3px; 
+    }
+    .after_h3 a { 
+        font-size: 14px; 
+    }
+    .overview_title h3 { 
+        margin-bottom: 38px; 
+    }
+    .deep_left p { 
+        font-size: 16px; 
+        padding-top: 0;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 28px;
+    }
+    .btn_2 { 
+        font-size: 14px; 
+    }
+    .deep_box {
+        margin-top: 44px;
+    }
+    .deep_left {
+        margin-bottom: 23px;
+    }
+    .btn_2::after { 
+        height: 2px; 
+    }
+
+    .owl-next i { 
+        right: 41%;
+    }
+    .owl-prev i { 
+        left: 41%;
+    }
+    .made_carosel_content > p {
+        font-size: 17px; 
+        line-height: 28px;
+    }
+    .made_user p,
+    .made_user h4 {
+        font-size: 16px; 
+    }
+    .work_single_text h4 { 
+        font-size: 16px; 
+    }
+    .work_single_text p { 
+        line-height: 17px;
+    }
+
+    .subscribe_text_left {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .subscribe_right { 
+        padding-left: 0;
+        border: none;
+        border-top: 1px solid #dddd;
+        margin-top: 40px;
+        padding-top: 40px;
+        text-align: center;
+    }
+    .subscribe_form { 
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .subscribe_right h3, .subscribe_text_left h3 { 
+        font-size: 20px; 
+    }
+    
 }
 
 @media all and (max-width: 767px){
-	
+    .mobile_menu_child a { 
+        font-size: 14px; 
+    }
+    .dorp_menu_left h3 {
+        font-size: 18px; 
+    }
+    .dorp_menu_left p {
+        font-size: 14px; 
+    }
+    .drop_middle_menu a { 
+        font-size: 16px; 
+    }
+    .slider_items h4 { 
+        font-size: 14px;
+    }
+    .slider_items h2 {
+        font-size: 35px;
+    }
+    .slider_items p {
+        font-size: 16px;
+    }
+    .single_business_item h3 {
+        font-size: 22px; 
+    }
+    .single_deep_item { 
+        width: 100%;
+    }
+    .team_area { 
+        background: #F4F3F3;
+    }
+    .made_carosel_content { 
+        margin-top: 64px;
+    }
 }
 
 @media all and (max-width: 575px){
-	
+    .slider_items h2 {
+        font-size: 25px;
+        line-height: 40px;
+    } 
+    .custom_slider .container {
+        margin: 0;
+        padding: 0;
+    }
+    .overview_title h3 {
+        font-size: 26px;
+    }
+    .owl-next i {
+        right: 36%;
+    }
+    .owl-prev i {
+        left: 36%;
+    }
+    .btn_1 { 
+        font-size: 14px; 
+    }
 }
 
 @media all and (max-width: 450px){
-	
+	.subscribe_form { 
+        flex-direction: column;
+    }
 }

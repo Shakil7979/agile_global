@@ -198,10 +198,57 @@ $(document).ready(function() {
 
 
 
-// Mobile Menu Icon
-$(document).ready(function(){
-	$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
-		$(this).toggleClass('open');
-		$('.mobiler_for_menu').slideToggle();
-	});
+// Mobile menu and dropdown both script here 
+
+$(document).ready(function() {
+    let menuOpen = false; // Track the state of the mobile menu
+
+    // Toggle the mobile menu
+    $('#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4').click(function() {
+        $(this).toggleClass('open');
+        $('.mobiler_for_menu').slideToggle();
+
+        // Close any open dropdowns if the menu is being toggled
+        if (menuOpen) {
+            $('.drop_menu_main').removeClass('active').css('right', '-300px');
+        }
+        menuOpen = !menuOpen;
+    });
+
+    // Handle dropdown menu clicks
+    $('.mobiler_for_menu .mobile_menu_child ul li a').click(function(e) {
+        e.preventDefault(); // Prevent default link behavior
+
+        const menuId = $(this).text().trim().toLowerCase().replace(/\s+/g, '-');
+        const $dropdown = $('.drop_menu_main[data-menu="' + menuId + '"]');
+
+        // Close all dropdowns except the current one
+        $('.drop_menu_main').not($dropdown).removeClass('active').css('right', '-300px');
+
+        // Toggle the selected dropdown
+        if ($dropdown.hasClass('active')) {
+            $dropdown.removeClass('active').css('right', '-300px');
+        } else {
+            $dropdown.addClass('active').css('right', '0'); // Slide in from the right
+        }
+    });
+
+    // Handle the "back" button click
+    $('.drop_back').click(function(e) {
+        e.preventDefault(); // Prevent default link behavior
+
+        // Hide the currently active dropdown
+        $('.drop_menu_main.active').removeClass('active').css('right', '-300px');
+    });
+
+    // Close mobile menu and dropdowns when clicking outside
+    $(document).click(function(event) {
+        if (!$(event.target).closest('.mobiler_for_menu, #nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4, .drop_menu_main').length) {
+            $('.mobiler_for_menu').slideUp();
+            $('#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4').removeClass('open');
+            $('.drop_menu_main').removeClass('active').css('right', '-300px');
+            menuOpen = false;
+        }
+    });
 });
+
