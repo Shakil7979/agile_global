@@ -476,6 +476,9 @@
     .slider_box { 
         height: 700px;
     }
+    .slider_items p { 
+        margin-bottom: 27px;
+    }
 }
 
 @media all and (max-width: 450px){
