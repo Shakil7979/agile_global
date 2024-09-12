@@ -911,6 +911,15 @@ ul li a,a{
 	margin-bottom: 25px;
 }
 
+.drop_back {
+	display: none;
+}
+
+.footer_bottom_left a:hover, .footer_single a:hover {
+	color: #f00d0d;
+	opacity: 0.83;
+}
+
 /*======================  End Page  ======================*/
 
 /* 
