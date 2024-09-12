@@ -6,7 +6,7 @@ $(document).ready(function(){
         loop: true,
         nav: false,
         dots: false,
-        // autoplay: true, 
+        autoplay: true, 
         animateIn: 'fadeIn',   // Optional, for fade effect
         animateOut: 'fadeOut', // Optional, for fade effect
         onTranslate: function(event) {
