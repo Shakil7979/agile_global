@@ -24,6 +24,7 @@
         display: none !important;
     }
 }
+
 @media all and (max-width: 991px){
 	.slider_1 ,
 	.slider_2 ,

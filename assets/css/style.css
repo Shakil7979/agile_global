@@ -354,7 +354,7 @@ ul li a,a{
 	width: 100%;
 }
 
-.single_business_item h3 {
+.single_business_item > h3 {
 	font-size: 28px;
 	font-family: "Inter", sans-serif;
 	text-align: center;
@@ -377,6 +377,44 @@ ul li a,a{
 	background: #ff0000;
 	opacity: 0.5;
 }
+
+.single_overlay_box {
+	position: absolute;
+	z-index: 999;
+	bottom: -100%;
+	background: #F17228;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	justify-content: center;
+	padding: 35px;
+	left: 0;
+	transition: 0.3s;
+}
+
+.single_business_item:hover .single_overlay_box {
+	bottom: 0;
+}
+
+
+.single_overlay_box > h3 {
+	font-size: 28px; 
+	color: #fff; 
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.single_overlay_box p {
+	color: #fff;
+	font-size: 18px;
+	line-height: 23px;
+	width: 100%;
+	max-width: 80%;
+}
+
+
+
 
 .single_business_item_2::after { 
 	background: #e26624; 
@@ -568,12 +606,10 @@ ul li a,a{
 .subscribe_form button {
 	border: none;
 	padding: 16px 35px;
-	border-right: 0.2px solid yellow;
 }
 
 .subscribe_text_left a { 
 	padding: 16px 35px;
-	border-right: 0.2px solid yellow;
 }
 
 .subscribe_right {
@@ -724,7 +760,7 @@ ul li a,a{
 
 .made_carosel_content {
 	width: 100%; 
-	margin-top: 98px;
+	margin-top: 40px;
 }
 
 .made_carosel_content > p {
@@ -919,6 +955,9 @@ ul li a,a{
 	color: #f00d0d;
 	opacity: 0.83;
 }
+
+
+
 
 /*======================  End Page  ======================*/
 
