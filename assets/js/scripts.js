@@ -35,7 +35,7 @@ $(document).ready(function(){
 		loop:true,
 		nav: true,
 		dots:true,
-		// autoplay:true,
+		autoplay:true,
 		navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
 	});
 
@@ -287,3 +287,9 @@ $(document).ready(function() {
 });
 
 
+$(window).on('load', function() {
+    // Hide the preloader once the page is fully loaded
+    $('#preloader').fadeOut('slow', function() {
+        $(this).remove();
+    });
+});
