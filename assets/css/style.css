@@ -297,7 +297,7 @@ ul li a,a{
     position: absolute;
     left: 0;
     bottom: -13px;
-    width: 120px; /* Initial width */
+    width: 0; /* Initial width */
     height: 5px;
     background: #f00d0d;
     transition: width 0.3s ease; /* Smooth transition for width */
@@ -382,7 +382,7 @@ ul li a,a{
 	position: absolute;
 	z-index: 999;
 	bottom: -100%;
-	background: #F17228;
+	background: #F70504;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -456,10 +456,15 @@ ul li a,a{
 	position: absolute;
 	left: 0;
 	bottom: -10px;
-	width: 100%;
+	width: 0;
 	height: 4px;
 	background: #f00d0d;
+	transition: 0.3s;
 }
+
+.btn_2:hover::after{
+	width: 100%;
+} 
 
 .deep_box{
 	margin-top: 76px;
