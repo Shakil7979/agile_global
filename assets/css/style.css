@@ -342,6 +342,24 @@ ul li a,a{
 	height: 100%;
 }
 
+.single_deep_img,
+.single_work_img{
+	overflow: hidden; 
+}
+
+.single_deep_img img,
+.single_work_item img{
+	transition: 0.5s;
+}
+ 
+.single_deep_img:hover img{
+	transform: scale(1.2);
+}
+
+.single_work_item img:hover{
+	transform: scale(1.2);
+}
+
 .work_single_text {
 	padding: 20px 30px;
 }
@@ -478,7 +496,7 @@ ul li a,a{
 
 .single_deep_item::after {
 	content: "";
-	position: absolute;
+	/* position: absolute; */
 	left: 0;
 	top: 0;
 	width: 100%;
