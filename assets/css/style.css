@@ -544,20 +544,51 @@ ul li a,a{
 }
 
 .slider_3 {
-	background: url(../images/banner/bg.png) no-repeat scroll center center / cover;
+	background: url(../images/banner/bg.png) no-repeat scroll center center / cover; 
+	height: 100vh;
 }
 
 .slider_1 {
-	background: url(../images/slider/1.png) no-repeat scroll center center / cover;
+	background: url(../images/slider/1.png) no-repeat scroll center center / cover; 
+	height: 100vh;
 }
 
 .slider_2 {
-	background: url(../images/slider/2.png) no-repeat scroll center center / cover;
+	background: url(../images/slider/2.png) no-repeat scroll center center / cover; 
+	height: 100vh;
 }
 
 .team_area {
-	padding: 150px 0 250px 0;
+	/* padding: 150px 0 250px 0; */
 	background: url(../images/team/bg.png) no-repeat scroll center center / cover;
+	height: 100vh;
+}
+
+.slider_carousel .owl-dots {
+	position: absolute;
+	bottom: 70px;
+	left: 0;
+	right: 0;
+}
+
+.slider_carousel .owl-dot span {
+	width: 15px !important;
+	height: 15px !important;
+}
+
+.slide_down_icon a i {
+	font-size: 65px;
+	color: #fff;
+}
+
+.slide_down_icon {
+	position: absolute;
+	bottom: 20px;
+	z-index: 99;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .team_content {

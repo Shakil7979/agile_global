@@ -1,16 +1,32 @@
 $(document).ready(function(){  
 
+    // $('.slide_down_icon').on('click', function(event) {
+    //     event.preventDefault();
+    //     $('.overview_area').slideToggle('slow');
+    // });
+
+    $('a[href^="#"]').on('click', function(event) {
+        event.preventDefault(); // Prevent default anchor click behavior
+
+        var target = $($(this).attr('href')); // Get the target element
+        
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top // Scroll to the target's top position
+            }, 1000); // Adjust the animation speed (1000ms = 1 second)
+        }
+    });
+
 	// Carousel
     $('.slider_carousel').owlCarousel({
         items: 1,
         loop: true,
         nav: false,
-        dots: false,
+        dots: true,
         autoplay: true, 
-        animateIn: 'fadeIn',   // Optional, for fade effect
-        animateOut: 'fadeOut', // Optional, for fade effect
+        animateIn: 'fadeIn',   
+        animateOut: 'fadeOut', 
         onTranslate: function(event) {
-            // Reset animation by moving .slider_items out of view
             $('.slider_items').css({
                 'opacity': '0',
                 'transform': 'translateX(-100px)',
@@ -18,16 +34,15 @@ $(document).ready(function(){
             });
         },
         onTranslated: function(event) {
-            // Animate .slider_items back into view
             $('.slider_items').css({
                 'opacity': '1',
                 'transform': 'translateX(0)',
-                'transition': 'all 1.5s ease' // Adjust the speed as needed
+                'transition': 'all 1.5s ease' 
             });
         }
     });
-    
-    
+
+ 
 
 	// Made Carousel
 	$('.made_carousel').owlCarousel({
