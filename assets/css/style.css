@@ -584,9 +584,12 @@ ul li a,a{
 
 .slider_carousel .owl-dots {
 	position: absolute;
-	bottom: 70px;
-	left: 0;
-	right: 0;
+	bottom: 0;
+	left: 30px; 
+	flex-direction: column;
+	display: flex;
+	margin: auto 0;
+	top: 50%;
 }
 
 .slider_carousel .owl-dot span {
@@ -601,7 +604,7 @@ ul li a,a{
 
 .slide_down_icon {
 	position: absolute;
-	bottom: 20px;
+	bottom: 32px;
 	z-index: 99;
 	left: 0;
 	right: 0;
@@ -1086,6 +1089,105 @@ ul li a,a{
         -ms-transform: rotate(360deg);
         transform: rotate(360deg);
     }
+}
+
+.contact_next_btn button ,
+.contact_btn_prev button {
+	background: #F00D0D;
+	border: none;
+	color: #fff;
+	padding: 18px;
+	font-size: 16px;
+	display: inline-block;
+	/* transform: rotate(-90deg); */
+}
+
+.btn_black_contact{
+	background-color: #000 !important;
+}
+
+.contact_next_btn ,
+.contact_btn_prev {
+	display: flex;
+	transform: rotate(-90deg);
+	flex-direction: row-reverse;
+}
+
+.right_form_contact {
+	position: fixed;
+	z-index: 99;
+	right: -59px;
+	top: 50%;
+}
+
+.btn_black_contact{ 
+	padding: 18px 10px !important;
+	border-radius:0 10px 10px   0;
+}
+
+.btn_red_contact{ 
+	border-radius: 10px 0 0  10px;
+}
+
+.btn_next {
+	display: none;
+}
+
+.contact_next_btn .btn_black_contact {
+	border-radius: 10px !important;
+}
+
+.form_hover { 
+	width: 100%;
+	max-width: 400px;
+	padding: 25px;
+	background: #F4F3F3;
+	border-radius: 15px;
+	position: fixed;
+	/* right: 55px; */
+	right: -600px;
+	z-index: 9999;
+	top: 15%;
+}
+
+.form_group{
+	margin-bottom: 15px;
+}
+
+.form_group textarea,
+.form_group input {
+	width: 100%;
+	border: 1px solid #ddd;
+	padding: 12px 20px;
+	border-radius: 35px;
+	font-size: 16px;
+}
+
+.form_group textarea {
+	resize: none;
+	height: 100px;
+}
+
+.form_group button{ 
+	width: 100%;
+	font-size: 16px;
+	border-radius: 35px;
+	border: 1px solid #ddd;
+	padding: 12px 20px;
+	background-color: #0F2435;
+	color: #fff;
+}
+
+.form_title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 42px;
+}
+
+.form_title a {
+	font-size: 25px;
+	color: #110e0e;
 }
 
 
