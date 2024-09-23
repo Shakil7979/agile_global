@@ -464,6 +464,9 @@
         line-height: 30px;
         margin: 8px 0;
     }
+    .slider_carousel .owl-dots { 
+        left: 6px; 
+    }
     .slider_items h2 { 
         width: 100%;
         max-width: 267px;
