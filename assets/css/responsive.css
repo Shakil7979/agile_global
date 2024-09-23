@@ -465,10 +465,17 @@
         margin: 8px 0;
     }
     .form_hover { 
-        max-width: 280px; 
+        padding: 15px; 
+    }
+    .form_hover { 
+        max-width: 300px; 
     }
     .slider_carousel .owl-dots { 
         left: 6px; 
+    }
+    .form_group textarea, .form_group input {
+ 
+        border-radius: 20px; 
     }
     .slider_items h2 { 
         width: 100%;
