@@ -464,6 +464,9 @@
         line-height: 30px;
         margin: 8px 0;
     }
+    .form_hover { 
+        max-width: 280px; 
+    }
     .slider_carousel .owl-dots { 
         left: 6px; 
     }
