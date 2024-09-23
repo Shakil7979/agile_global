@@ -343,33 +343,33 @@ $(window).on('load', function() {
 
 
 
-
 $(document).ready(function() {
-    var isClosed = false;  
+    var isClosed = true;  
  
-    $('.btn_red_contact').on('mouseenter', function() {
-        if (!isClosed) {
+    $('.btn_red_contact').on('click', function() {
+        if (isClosed) {
+            $('.form_hover').stop().animate({ right: '55px' }, 500);
+        } else {
+            $('.form_hover').stop().animate({ right: '-600px' }, 500);
+        }
+        isClosed = !isClosed;   
+    });
+ 
+    $('.btn_red_contact, .form_hover').on('mouseenter', function() {
+        if (isClosed) {
             $('.form_hover').stop().animate({ right: '55px' }, 500);
         }
     });
  
-    // $('.close_sk_form').on('click', function() {
-    //     isClosed = true;  
-    //     $('.form_hover').stop().animate({ right: '-600px' }, 500);
-    // });
-
-    // $('.btn_red_contact').on('click', function() {
-    //     isClosed = true;  
-    //     $('.form_hover').stop().animate({ right: '55px' }, 500);
-    // });
- 
-    $('.form_hover').on('mouseenter', function() {
-        if (!isClosed) {
-            $('.form_hover').stop().animate({ right: '55px' }, 500);
-        }
-    }).on('mouseleave', function() {
-        if (!isClosed) {
+    $('.btn_red_contact, .form_hover').on('mouseleave', function() {
+        if (isClosed) {
             $('.form_hover').stop().animate({ right: '-600px' }, 500);
         }
-    }); 
+    });
+ 
+    $('.close_sk_form').on('click', function() {
+        isClosed = true;  
+        $('.form_hover').stop().animate({ right: '-600px' }, 500);
+    });
 });
+
